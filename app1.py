@@ -25,7 +25,7 @@ df["Casualties"] = (
     .fillna("0")
     .astype(int)
 )
-"""
+
 # Clean Severity (Low/Medium/High -> numeric 1/2/3)
 severity_map = {"Low": 1, "Medium": 2, "High": 3}
 df["Severity_Level"] = df["Severity"].map(severity_map)
@@ -46,7 +46,7 @@ filtered_df = df[
     (df["City"].isin(cities)) &
     (df["Weather"].isin(weather)) &
     (df["Severity"].isin(severity))
-]"""
+]
 
 """# -------------------------------
 # MAIN TITLE
