@@ -48,7 +48,7 @@ filtered_df = df[
     (df["Severity"].isin(severity))
 ]
 
-"""# -------------------------------
+# -------------------------------
 # MAIN TITLE
 # -------------------------------
 st.title("🚦 Traffic Accident Analysis Dashboard")
@@ -94,6 +94,7 @@ st.plotly_chart(fig3, use_container_width=True)
 # -------------------------------
 st.subheader("🚗 Vehicles Involved Trend")
 fig4 = px.line(filtered_df, x="Date", y="Vehicles_Involved", markers=True, title="Vehicles Involved Over Time")
-st.plotly_chart(fig4, use_container_width=True)"""
+st.plotly_chart(fig4, use_container_width=True)
+
 
 
