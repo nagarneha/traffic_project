@@ -1,9 +1,9 @@
-Accident_ID,Date,City,Weather,Vehicles_Involved,Casualties,Severity,cause_of_accident,Road_Type,road_condition
-101,1/15/2023,Delhi,Clear,truck,1,Low,overspeeding,highway,dry 
-102,2/10/2023,Mumbai,Rainy,bus,3,High,alcohol,city road,damaged
-103,3/5/2023,Bhopal,Fog,bike,0,Medium,overspeeding,rural road,Wet
-104,3/25/2023,Indore,Clear,bus,0,Low,whether ,highway,dry 
-105,4/12/2023,Pune,Clear,truck,2,High,alcohol,city road,damaged
-106,5/8/2023,Delhi,Rainy,truck,1,Low,overspeeding,rural road,Wet
-107,5/20/2023,Bhopal,Fog,car,1,Medium,whether ,highway,damaged
-108,6/1/2023,Mumbai,Clear,truck,2,High,alcohol,city road,damaged
+Accident_ID,Date,City,Weather,Vehicles_Involved,Casualties,Severity,cause_of_accident,Road_Type,road_condition,Date/Time,hour
+101,1/15/2023,Delhi,Clear,truck,1,Low,overspeeding,highway,dry ,2/4/2024 14:35,14
+102,2/10/2023,Mumbai,Rainy,bus,3,High,alcohol,city road,damaged,2/4/2024 8:10,8
+103,3/5/2023,Bhopal,Fog,bike,0,Medium,overspeeding,rural road,Wet,2/4/2024 22:48,22
+104,3/25/2023,Indore,Clear,bus,0,Low,whether ,highway,dry ,2/4/2024 4:14,2
+105,4/12/2023,Pune,Clear,truck,2,High,alcohol,city road,damaged,2/4/2024 17:45,7
+106,5/8/2023,Delhi,Rainy,truck,1,Low,overspeeding,rural road,Wet,2/2/2024 1:16,19
+107,5/20/2023,Bhopal,Fog,car,1,Medium,whether ,highway,damaged,2/4/2024 12:24,16
+108,6/1/2023,Mumbai,Clear,truck,2,High,alcohol,city road,damaged,2/4/2024 20:09,5
