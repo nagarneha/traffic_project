@@ -89,6 +89,7 @@ fig3 = px.bar(filtered_df.groupby("Road_Type")["Accident_ID"].count().reset_inde
               x="Road_Type", y="Accident_ID", title="Accidents per Road Type")
 st.plotly_chart(fig3, use_container_width=True)
 
+
 # -------------------------------
 # CHART 4 — VEHICLES INVOLVED TREND
 # -------------------------------
@@ -98,3 +99,74 @@ st.plotly_chart(fig4, use_container_width=True)
 
 
 
+
+
+
+
+
+# ---------------------------------------------
+# ⏱ BEST TIME TO TRAVEL (PREDICTIVE RISK)
+# ---------------------------------------------
+"""st.markdown("## ⏱ Best Time to Travel (Predictive Accident Risk)")
+
+# make sure column names are clean
+filtered_df.columns = filtered_df.columns.str.strip().str.lower()
+
+if "hour" in filtered_df.columns and "severity" in filtered_df.columns:
+
+    severity_weights = {
+        "low": 1,
+        "medium": 2,
+        "high": 3
+    }
+
+    # convert severity text → numeric weight
+    filtered_df["sev_weight"] = (
+        filtered_df["severity"]
+        .str.lower()
+        .map(severity_weights)
+        .fillna(1)
+    )"""
+
+    # hourly risk score
+    """hourly_risk = (
+        filtered_df
+        .groupby("hour")["sev_weight"]
+        .sum()
+        .reset_index()
+        .sort_values("hour")
+    )
+
+    # smoothing
+    hourly_risk["risk_smooth"] = hourly_risk["sev_weight"].rolling(
+        window=2, min_periods=1
+    ).mean()
+
+    # plot
+    fig = px.line(
+        hourly_risk,
+        x="hour",
+        y="risk_smooth",
+        markers=True,
+        title="Accident Risk Score by Hour (Best Time to Travel)",
+        labels={"risk_smooth": "Risk Score"}
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
+    # safest & dangerous hour
+    safest_hour = int(hourly_risk.loc[hourly_risk["risk_smooth"].idxmin(), "hour"])
+    dangerous_hour = int(hourly_risk.loc[hourly_risk["risk_smooth"].idxmax(), "hour"])
+
+    col1, col2 = st.columns(2)
+    col1.success(f"🟢 Safest Hour to Travel: **{safest_hour}:00**")
+    col2.error(f"🔴 Most Dangerous Hour: **{dangerous_hour}:00**")
+
+else:
+    st.warning("Required columns (hour, severity) not found in data.")"""
+
+
+
+
+
+ss
