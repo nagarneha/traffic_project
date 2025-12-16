@@ -107,7 +107,7 @@ st.plotly_chart(fig4, use_container_width=True)
 # ---------------------------------------------
 # ⏱ BEST TIME TO TRAVEL (PREDICTIVE RISK)
 # ---------------------------------------------
-"""st.markdown("## ⏱ Best Time to Travel (Predictive Accident Risk)")
+st.markdown("## ⏱ Best Time to Travel (Predictive Accident Risk)")
 
 # make sure column names are clean
 filtered_df.columns = filtered_df.columns.str.strip().str.lower()
@@ -126,7 +126,7 @@ if "hour" in filtered_df.columns and "severity" in filtered_df.columns:
         .str.lower()
         .map(severity_weights)
         .fillna(1)
-    )"""
+    )
 
     # hourly risk score
     """hourly_risk = (
@@ -167,6 +167,5 @@ else:
 
 
 
-
-
 ss
+
