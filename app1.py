@@ -129,7 +129,7 @@ if "hour" in filtered_df.columns and "severity" in filtered_df.columns:
     )
 
     # hourly risk score
-    """hourly_risk = (
+    hourly_risk = (
         filtered_df
         .groupby("hour")["sev_weight"]
         .sum()
@@ -163,9 +163,9 @@ if "hour" in filtered_df.columns and "severity" in filtered_df.columns:
     col2.error(f"🔴 Most Dangerous Hour: **{dangerous_hour}:00**")
 
 else:
-    st.warning("Required columns (hour, severity) not found in data.")"""
+    st.warning("Required columns (hour, severity) not found in data.")
 
 
 
-ss
+
 
