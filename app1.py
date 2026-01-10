@@ -169,3 +169,30 @@ else:
 
 
 
+# Time-of-day Catagory 
+
+def time_bucket(hour):
+    if 5 <= hour <= 11:
+        return "Morning"
+    elif 12 <= hour <= 16:
+        return "Afternoon"
+    elif 17 <= hour <= 21:
+        return "Evening"
+    else:
+        return "Night"
+
+df['Time_of_Day'] = df['hour'].apply(time_bucket)
+
+
+
+
+
+
+## Severity VS time of day(Aciident Count)
+
+severity_time = (
+    df.groupby(['Time_of_Day', 'Severity'])
+      .size()
+      .unstack(fill_value=0)
+)
+
